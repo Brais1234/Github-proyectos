@@ -274,5 +274,38 @@ Se diseñó y construyó entre 1895 y 1902 según los planos de Frigyes Schulek.
     <br>
     <br>
 </div>
+                                                                                                  
+   
+ 
+    <h1>Mad Libs</h1>
+     
+    <ul>
+      <li>Noun: <input type="text" id="noun"></li>
+      <li>Adjective: <input type="text" id="adjective"></li>
+      <li>Someone's Name: <input type="text" id="person"></li>
+    </ul>
+     
+    <button id="lib-button">Lib it!</button>
+      
+    <p>Generated story: 
+    <span id="story"></span>
+    </p>
+ 
+    <script>
+        var libButton = document.getElementById('lib-button');
+        var libIt = function() {
+        var storyDiv = document.getElementById("story");
+        var Noun = document.getElementById("noun");
+        var Adjective = document.getElementById("adjective");
+        var Someones = document.getElementById("person");
+        storyDiv.innerHTML = Noun.value +" estaba en mate "  +Adjective.value+ " y me ofendí porque me puso un 4 " +Someones.value+ " y se quedó tan tranquila ";
+        };
+        libButton.addEventListener('click', libIt);
+        
+        
+    </script>
+  
+                                                                                       
+                                                                                                  
 </body>
 </html>
