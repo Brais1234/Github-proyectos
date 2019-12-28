@@ -10,13 +10,13 @@ myImage.onclick = function() {
 
   let mySrc = myImage.getAttribute('src');
 
-  if(mySrc === 'images/Messi.png') {
+  if(mySrc === 'berlin bien.jpg') {
 
-    myImage.setAttribute ('src','images/Cristiano.png');
+    myImage.setAttribute ('src','amsterdam bein.jpg');
 
   } else {
 
-    myImage.setAttribute ('src','images/Messi.png');
+    myImage.setAttribute ('src','berlin bien.jpg');
 
   }
 
@@ -46,7 +46,7 @@ function setUserName() {
 
     localStorage.setItem('name', myName);
 
-    myHeading.innerHTML = 'Messi es mejor, asúmelo ' + myName;
+    myHeading.innerHTML = 'Viaje po Europa' + myName;
 
   }
 
@@ -62,7 +62,7 @@ if(!localStorage.getItem('name')) {
 
   let storedName = localStorage.getItem('name');
 
-  myHeading.innerHTML = 'Messi es el mejor, asúmelo ' + storedName;
+  myHeading.innerHTML = 'Viaje por Europa' + storedName;
 
 }
 
