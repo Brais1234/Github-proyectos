@@ -1,127 +1,88 @@
-background(186, 145, 20); // wooden table
-ellipse(200, 200, 350, 350); // plate
-ellipse(200, 200, 300, 300); 
-//patatitas
-fill(232, 221, 14);
-var drawRect = function(){
-var x = random(60,210);
-var y = random(40,130);
-rect(x, y, 110, 10);
-};
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-drawRect();
-//vaso de agua
-fill(177, 242, 239);
-ellipse(400, 5, 200, 200);
-//agua del vaso
-fill(54, 133, 217);
-ellipse(400, 5, 180, 180);
-//una lonchita de queso
-fill(255, 162, 0);
-rect( 140, 140, 180, 180);
-//Carne de la hamburguesa
-fill(97, 52, 4);
-ellipse(230, 230, 200, 200);
-//Tomatico
-fill(255, 0, 0);
-ellipse(190, 230, 120, 120);
-ellipse(270, 230, 120, 120);
-ellipse(230, 195, 120, 120);
-ellipse(230, 265, 120, 120);
+// Image switcher code
 
-//Pan de hamburguesa
-fill(209, 129, 50);
-ellipse(230, 230, 160, 160);
 
-// Semillas pan de hamburguesa
-fill(199, 118, 42);
 
-var drawEllipse = function(){
-var x = random(180,290);
-var y = random(170,290);
-ellipse(x, y, 10, 5);
+let myImage = document.querySelector('img');
 
-};
-drawEllipse ();
-drawEllipse ();
-drawEllipse ();
-drawEllipse ();
-drawEllipse ();
-drawEllipse ();
-drawEllipse ();
-drawEllipse ();
-drawEllipse ();
-drawEllipse ();
-drawEllipse ();
-drawEllipse ();
-drawEllipse ();
-drawEllipse ();
-drawEllipse ();
-drawEllipse ();
-drawEllipse ();
-drawEllipse ();
-drawEllipse ();
-drawEllipse ();
-drawEllipse ();
-drawEllipse ();
-drawEllipse ();
-drawEllipse ();
-drawEllipse ();
-drawEllipse ();
-drawEllipse ();
-drawEllipse ();
-drawEllipse ();
-// Nachos
-stroke (0);
-fill (247, 103, 37);
-triangle (87,200, 10, 250, 87, 300); 
-triangle (87,240, 10, 200, 87, 140); 
-triangle (120,260, 70, 300, 120, 350); 
-triangle (130,200, 80, 250, 130, 300); 
-triangle (120,150, 70, 200, 120, 250); 
-//Ketchup
-draw = function() {
-    fill(240, 239, 200);
-    rect(5, 10, 50, 100);
-  if (mouseIsPressed) {
-      fill(255, 0, 0);
-       rect(10, 14, 40, 90);
+
+
+myImage.onclick = function() {
+
+  let mySrc = myImage.getAttribute('src');
+
+  if(mySrc === 'images/Messi.png') {
+
+    myImage.setAttribute ('src','images/Cristiano.png');
+
+  } else {
+
+    myImage.setAttribute ('src','images/Messi.png');
+
   }
-};
+
+}
+
+
+
+// Personalized welcome message code
+
+
+
+let myButton = document.querySelector('button');
+
+let myHeading = document.querySelector('h1');
+
+
+
+function setUserName() {
+
+  let myName = prompt('Please enter your name.');
+
+  if(!myName || myName === null) {
+
+    setUserName();
+
+  } else {
+
+    localStorage.setItem('name', myName);
+
+    myHeading.innerHTML = 'Messi es mejor, asúmelo ' + myName;
+
+  }
+
+}
+
+
+
+if(!localStorage.getItem('name')) {
+
+  setUserName();
+
+} else {
+
+  let storedName = localStorage.getItem('name');
+
+  myHeading.innerHTML = 'Messi es el mejor, asúmelo ' + storedName;
+
+}
+
+
+
+myButton.onclick = function() {
+
+  setUserName();
+
+}
+
+
+   var catEl = document.getElementById("cat");
+ 
+  var startTime = new Date().getTime();
+  var walkTheCat = function() {
+      var currTime = new Date().getTime();
+      var secondsElapsed = ((currTime - startTime)/1000);
+   var newLeft= secondsElapsed*77 + "px";
+    catEl.style.left= newLeft;
+    window.requestAnimationFrame(walkTheCat);
+  };
+  walkTheCat();
