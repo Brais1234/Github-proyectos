@@ -1,81 +1,78 @@
 html {
 
-  font-size: 10px;
-
-  font-family: 'Open-Sans', serif;
-
+ body {
+            background-color: rgb(138, 235, 230);
+        }
+        h2  {
+            color: rgb(43, 125, 20);
+        }
+        h1  {
+            color: rgb(199, 10, 67);
+        }
+        h3  {
+            color: rgb(230, 200, 69);
+        }
+            .declaration { 
+                  font-weight: bold;
+                  font-style: italic;
+            }
+              .viajes { 
+                  font-weight: bold;
+                  font-family: arial;
+                  font-style: italic;
+            }
+             #landscape {
+            width: 250px;
+            position: relative;
+            top: 20px;
+            left:  180px;
+        
+        }
+           #autorylicencia {
+            width: 250px;
+            position: relative;
+            top: 20px;
+            left:  180px;
+        
+        }
+        
+        .contenedor {
+  position: relative;
+  height: 290px;
+  width: 290px;
+  margin: 50px 20px;
+  float: left;
 }
 
-
-
-
-
-h1 {
-
-  font-size: 60px;
-
-  text-align: center;
-
+.contenedor img {
+  position: absolute;
+  left: 0;
+  transition: opacity 1.5s ease-in-out;
 }
 
-
-
-p, li {
-
-  font-size: 16px;
-
-  line-height: 2;
-
-  letter-spacing: 1px;
-
+.contenedor img.top:hover {
+  opacity: 0;
 }
-
-
-
-
-
-html {
-
-  background-color: #00539F;
-
+#table1 {
+    border-collapse: separate;
+     border:  rgb(18, 18, 227) 5px solid;
 }
-
-
-
-body {
-
-  width: 600px;
-
-  margin: 0 auto;
-
-  background-color: #FF9500;
-
-  padding: 0 20px 20px 20px;
-
-  border: 5px solid black;
-
+#td1 {
+  border: rgb(18, 18, 227) 5px solid;
 }
+#caption { border: black 10px solid; }
 
-
-
-h1 {
-
-  margin: 0;
-
-  padding: 20px 0;
-
-  color: #00539F;
-
-  text-shadow: 3px 3px 1px black;
-
-}
-
-
-
-img {
-
-  display: block;
-
-  margin: 0 auto;
-
-}
+  #annefrank {
+            width: 100px;
+            float: left;
+             margin-right: 6px;
+            margin-bottom: 6px;
+        }
+  #edificioreichstag {
+            float: right;
+            width: 30%;
+            margin-left: 10px;
+        }
+ #listamsterdam  
+ { background-color: rgb(56, 186, 30);
+ }
