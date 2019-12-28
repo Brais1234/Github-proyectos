@@ -13,7 +13,7 @@ myImage.onclick = function() {
 
   if(mySrc === 'images/amsterdam.png') {
 
-    myImage.setAttribute ('src','images/berlín.png');
+    myImage.setAttribute ('src','images/berlin.png');
 
   } else {
 
